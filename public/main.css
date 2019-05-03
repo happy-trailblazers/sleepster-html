@@ -33,6 +33,7 @@ h1 {
   margin-left: -.3em;
 }
 img {
+  margin-top: 3px;
   height: 4.5em;
   align-self: flex-start;
 }
