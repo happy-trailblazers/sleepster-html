@@ -4,6 +4,8 @@ font-family: 'Roboto Condensed', sans-serif; */
 html, body {
   margin: 0;
   height: 100vh;
+  background: rgb(233, 233, 233);
+  animation: fade 1s;
 }
 
 #main-container {
@@ -20,11 +22,16 @@ html, body {
 
 @keyframes fade {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
-
+  20% {
+    opacity: .1;
+  }
+  60% {
+    opacity: 1;
+  }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -38,6 +45,7 @@ header {
   flex-direction: row;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  animation: fade 1s;
 }
 h1 {
   font-family: 'Gugi', cursive;
@@ -56,8 +64,7 @@ ul {
   display: flex;
   justify-content: center;
   list-style-type:none;
-  margin-right: 10vw;
-  margin-left: 0vw;
+  animation: fade 1s;
 }
 
 #step1, #step2 {
@@ -78,6 +85,7 @@ ul {
   font-size: .5em;
 }
 #step2 {
+  padding-top: 12px;
   position: absolute;
   top: 14em;
 }
@@ -96,7 +104,16 @@ a:visited {
   letter-spacing: .4em;
 }
 
+@media only screen and (max-width: 1435px) {
+  header img {
+    align-self: center;
+  }
+}
 @media only screen and (max-width: 525px) {
+  ul {
+    margin-right: 10em;
+    margin-left: 0;
+  }
   #step2 {
     top: 15.4em;
   }
